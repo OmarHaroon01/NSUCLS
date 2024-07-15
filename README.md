@@ -9,7 +9,6 @@ NSUCLS is an online platform designed for the members of North South University 
 - **User-friendly Interface:** NSUCLS provides an intuitive interface for easy navigation and usage.
 - **Speech Recognition:** Users can lodge complaints using speech recognition, making the process quicker and more accessible.
 - **Instant Review:** Complaints are immediately reviewed by a designated faculty member or system admin.
-- **Categorization:** Complaints can be categorized based on the type of issue and the involved parties.
 
 ## Repository Structure
 
@@ -35,5 +34,57 @@ This folder includes the design specifications for the NSUCLS project. It provid
 - Node.js
 - npm or yarn
 - Android Studio (for Android app development)
-- A suitable database (e.g., PostgreSQL, MySQL)
+- MySQL
 
+### Installation
+
+To run this project locally, follow these steps:
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/OmarHaroon01/NSUCLS.git
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd NSUCLS
+    ```
+
+3. Install dependencies for both frontend and backend:
+
+    ```bash
+    # For backend
+    cd Project/backend
+    npm install
+
+    # For frontend
+    cd ../frontend
+    npm install
+    ```
+
+4. Set up your environment variables. Create a `.env` file in the `backend` directory and add CLIEND_ID, EMAIL and PASSWORD for sending email for email verification and using google oauth:
+
+    ```env
+    # Follow the instruchere here for CLIENT_ID
+    # https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid
+    CLIENT_ID=your_client_id 
+    EMAIL=your_email
+    #Visit https://security.google.com/settings/security/apppasswords to create app password
+    PASSWORD=your_app_password
+    ```
+
+5. Run the server:
+
+    ```bash
+    # For backend
+    cd Project/backend
+    npm start
+
+    # For frontend
+    cd ../frontend
+    npm start
+    ```
+
+6. Open your browser and go to `http://localhost:3000`.
