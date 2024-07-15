@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_col"
+    tools:context=".ComplaintDetailsActivity"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/complaintDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#244873"
+        android:gravity="left"
+        android:paddingLeft="20dp"
+        android:paddingTop="50dp"
+        android:paddingBottom="5dp"
+        android:text="Complaint Details"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title:"
+        android:textSize="25sp"
+        android:gravity="left"
+        android:layout_below="@+id/complaintDetails"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:id="@+id/title"
+        android:paddingLeft="20dp"
+        android:textStyle="bold"
+        />
+
+        <TextView
+            android:id="@+id/actualTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:gravity="left"
+            android:paddingLeft="20dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actualTitle"
+        android:layout_marginTop="20dp"
+        android:gravity="left"
+        android:paddingLeft="20dp"
+        android:text="Description:"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/actualDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description"
+            android:gravity="left"
+            android:paddingLeft="20dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Complain Against:"
+        android:textSize="25sp"
+        android:gravity="left"
+        android:layout_below="@+id/actualDescription"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:id="@+id/against"
+        android:paddingLeft="20dp"
+        android:textStyle="bold"
+        />
+
+        <ListView
+            android:id="@+id/actualAgainst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/against"
+            android:gravity="left"
+            android:paddingLeft="20dp"
+            android:textColor="@color/black"
+            android:textSize="100sp" />
+
+        <TextView
+            android:id="@+id/evidences"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/actualAgainst"
+            android:layout_marginTop="20dp"
+            android:gravity="left"
+            android:paddingLeft="20dp"
+            android:text="Evidence(s):"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/evidenceFile"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/evidences"-->
+<!--            android:clickable="true"-->
+<!--            android:gravity="left"-->
+<!--            android:onClick="onClickEvidence"-->
+<!--            android:paddingLeft="20dp"-->
+<!--            android:text="Evidence 1"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="25sp" />-->
+        <LinearLayout
+            android:id="@+id/evidenceLayout"
+            android:layout_below="@id/evidences"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Complaint Reviewer:"
+        android:textSize="25sp"
+        android:gravity="left"
+        android:layout_below="@+id/evidenceLayout"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:id="@+id/reviewer"
+        android:paddingLeft="20dp"
+        android:textStyle="bold"
+        />
+
+        <TextView
+            android:id="@+id/actualReviewer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reviewer"
+            android:gravity="left"
+            android:paddingLeft="20dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actualReviewer"
+        android:layout_marginTop="20dp"
+        android:gravity="left"
+        android:paddingLeft="20dp"
+        android:text="Comment(s):"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/actualComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/comments"
+            android:gravity="left"
+            android:paddingLeft="20dp"
+            android:textColor="@color/black"
+            android:textSize="100sp"
+            android:divider="@null"
+            android:dividerHeight="10.0sp"/>
+
+    <TextView
+        android:id="@+id/lodgerDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#244873"
+        android:gravity="left"
+        android:paddingLeft="20dp"
+        android:paddingTop="50dp"
+        android:paddingBottom="5dp"
+        android:text="Lodger Details"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:layout_below="@+id/actualComments"
+        android:textStyle="bold" />
+
+
+
+        <ImageView
+            android:id="@+id/lodgerProfilePic"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_below="@+id/lodgerDetails"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_baseline_person_24"
+            android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:textSize="25sp"
+        android:gravity="left"
+        android:layout_below="@+id/lodgerProfilePic"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:id="@+id/name"
+        android:paddingLeft="20dp"
+        android:textStyle="bold"
+        />
+
+        <TextView
+            android:id="@+id/lodgerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:gravity="left"
+            android:paddingLeft="20dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NSU ID:"
+        android:textSize="25sp"
+        android:gravity="left"
+        android:layout_below="@+id/lodgerName"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:id="@+id/nsuId"
+        android:paddingLeft="20dp"
+        android:textStyle="bold"
+        />
+
+        <TextView
+            android:id="@+id/lodgerNsuId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nsuId"
+            android:gravity="left"
+            android:paddingLeft="20dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lodgerNsuId"
+        android:layout_marginTop="20dp"
+        android:gravity="left"
+        android:paddingLeft="20dp"
+        android:text="Email:"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lodgerEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email"
+            android:gravity="left"
+            android:paddingLeft="20dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Designation:"
+        android:textSize="25sp"
+        android:gravity="left"
+        android:layout_below="@+id/lodgerEmail"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:id="@+id/designation"
+        android:paddingLeft="20dp"
+        android:textStyle="bold"
+        />
+
+        <TextView
+            android:id="@+id/lodgerDesignation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/designation"
+            android:gravity="left"
+            android:paddingLeft="20dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+    </RelativeLayout>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
